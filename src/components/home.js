@@ -1,15 +1,25 @@
 import React, { Component } from "react";
-class login extends Component {
+import "../App.css";
+
+class home extends Component {
   constructor() {
     super();
   }
-
+  handleVolunteer(){
+    console.log('Volunteer Clicked')
+  }
+  handleNeed()
+  {
+    console.log('In Need Clicked')
+  }
   render() {
+    
     return (
-      <div className="app">
-        <h1>HOME PAGE</h1>
-      </div>
+      <body>
+        <button onClick={this.handleVolunteer()}>Volunteer</button>
+        <button onClick={this.handleNeed()}>In Need</button>
+      </body>
     );
   }
 }
-export default login;
+export default home;
