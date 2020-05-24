@@ -9,17 +9,17 @@ class Menu extends Component{
         }
         )
         return (
-        <div>
-        <header>
-        <nav className="menu">
-            <div className="menu__link"> Delivery Service</div>
-            <div className="menu__right">
-                <ul className="menu__list">
-                    {linksMarkup}
-                </ul>
-            </div>
-        </nav>
-        </header>
+        <div className="App">
+            <header className="App-header">
+            <nav className="menu">
+                <div className="menu__link"> Delivery Service</div>
+                <div className="menu__right">
+                    <ul className="menu__list">
+                        {linksMarkup}
+                    </ul>
+                </div>
+            </nav>
+            </header>
         </div>
         )
     }

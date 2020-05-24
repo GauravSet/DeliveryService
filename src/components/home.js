@@ -15,10 +15,11 @@ class home extends Component {
   render() {
     
     return (
-      <body>
+      <header>
+        Welcome! 
         <button onClick={this.handleVolunteer()}>Volunteer</button>
         <button onClick={this.handleNeed()}>In Need</button>
-      </body>
+      </header>
     );
   }
 }
