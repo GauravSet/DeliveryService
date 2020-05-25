@@ -5,18 +5,16 @@ class home extends Component {
   constructor() {
     super();
   }
-  handleVolunteer(){
-    console.log('Volunteer Clicked')
+  handleVolunteer() {
+    console.log("Volunteer Clicked");
   }
-  handleNeed()
-  {
-    console.log('In Need Clicked')
+  handleNeed() {
+    console.log("In Need Clicked");
   }
   render() {
-    
     return (
       <header>
-        Welcome! 
+        Welcome!
         <button onClick={this.handleVolunteer()}>Volunteer</button>
         <button onClick={this.handleNeed()}>In Need</button>
       </header>
