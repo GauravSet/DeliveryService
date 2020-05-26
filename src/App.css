@@ -1,11 +1,17 @@
 * {
   box-sizing: border-box;
 }
-
+.whitetext {
+  font-family: "Open Sans";
+  color: white;
+}
 body {
   font-family: "Open Sans", sans-serif;
   background-color: #103d5d;
   text-align: center;
+}
+.selectType {
+  margin: 20px;
 }
 body.app {
   background-color: rgb(233, 133, 133);

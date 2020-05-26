@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import "../App.css";
 import withFirebaseAuth from "react-with-firebase-auth";
-import * as firebase from "firebase/app";
+import * as firebaseapp from "firebase/app";
 import "firebase/auth";
-import config from "../firebase";
+import firebase from "../firebase";
 import Button from "@material-ui/core/Button";
 import Home from "./home";
-import Menu from "../Menu.js";
+import Menu from "./menu.js";
 class login extends Component {
   constructor() {
     super();
@@ -14,7 +14,7 @@ class login extends Component {
       links: [
         { label: "Home", link: "/home" },
         { label: "About", link: "/about" },
-        { label: "Contact Us", link: "#/contact-us" },
+        { label: "Contact Us", link: "/contact-us" },
       ],
     };
   }
@@ -25,9 +25,9 @@ class login extends Component {
         <div>
           {user ? (
             <div className="Welcome">
-              <p>Hello, {user.displayName}</p>
+              <p className="whitetext">Hello, {user.displayName}</p>
               <Menu links={this.state.links} />
-              <Home />
+              <Home user={user} />
             </div>
           ) : null}
 
@@ -41,10 +41,9 @@ class login extends Component {
     );
   }
 }
-const firebaseApp = firebase.initializeApp(config);
-const firebaseAppAuth = firebaseApp.auth();
+const firebaseAppAuth = firebase.auth();
 const providers = {
-  googleProvider: new firebase.auth.GoogleAuthProvider(),
+  googleProvider: new firebaseapp.auth.GoogleAuthProvider(),
 };
 export default withFirebaseAuth({
   providers,
